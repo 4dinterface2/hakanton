@@ -11,7 +11,6 @@ import NavigationScroll from '../layout/navigationScroll';
 import customizationReducer from "./reducer";
 // import layout from '../layout/MainLayout';
 
-
 export default function StoreAdmin ({dataProvider}) {
     const customization = useReducer(customizationReducer);
     return <NavigationScroll>
