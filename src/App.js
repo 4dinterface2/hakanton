@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import StoreAdmin from './admin';
 import VendorAdmin from './vendor';
 
+
 //import { ReactQueryDevtools } from 'react-query/devtools'
 //import jsonServerProvider from 'ra-data-json-server';
 //import { UserList } from './users';
@@ -16,6 +17,14 @@ import VendorAdmin from './vendor';
 import fakeDataProvider from 'ra-data-fakerest';
 import theme from './theme'
 import StoreFront from "./adminStorage";
+
+// статистика
+// техподдержка
+// финансовая отчетность (переводы нам)
+
+// персональные предлоожения
+// -- процент с услуг спик
+import SuperAdmin from "./adminStorage";
 
 const dataProvider = fakeDataProvider({
     orders:[
@@ -57,10 +66,10 @@ const dataProvider = fakeDataProvider({
 const App = () => (
         <BrowserRouter>
             <Routes>
- 
 
-            <Route path="/admin/*" element={<StoreAdmin dataProvider={dataProvider} />} />
+                <Route path="/admin/*" element={<StoreAdmin dataProvider={dataProvider} />} />
                 <Route path="/vendor/*" element={<VendorAdmin dataProvider={dataProvider} />} />
+                <Route path="/superadmin/*" element={<SuperAdmin dataProvider={dataProvider} />} />
                 <Route path="/*" element={<StoreFront dataProvider={dataProvider}/>} />
             </Routes>
         </BrowserRouter>

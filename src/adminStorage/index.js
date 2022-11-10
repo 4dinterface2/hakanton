@@ -16,10 +16,9 @@ export default function StoreFront ({dataProvider }) {
     return <NavigationScroll>
 
         <Admin basename="/" dataProvider={dataProvider } dashboard={Dashboard} theme={theme(customization)} disableTelemetry>
+            <CssBaseline/>
 
-        <CssBaseline/>
             <Resource name="storeEvents"  list={EventsList} edit={EventEdit} create={EventCreate}/>
-            
         </Admin>
     </NavigationScroll>
 }
