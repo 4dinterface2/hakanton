@@ -14,7 +14,7 @@ import customizationReducer from "./reducer";
 export default function StoreFront ({dataProvider }) {
     const customization = useReducer(customizationReducer);
     return <NavigationScroll>
-        <Admin basename="/store" dataProvider={dataProvider } dashboard={Dashboard} theme={theme(customization)} disableTelemetry>
+        <Admin basename="/" dataProvider={dataProvider } dashboard={Dashboard} theme={theme(customization)} disableTelemetry>
             <CssBaseline/>
             <Resource name="events" list={EventsList} edit={EventEdit} create={EventCreate}/>
             

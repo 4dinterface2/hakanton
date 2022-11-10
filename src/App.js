@@ -48,9 +48,9 @@ const dataProvider = fakeDataProvider({
 const App = () => (
         <BrowserRouter>
             <Routes>
-                <Route path="/store" element={<StoreFront dataProvider={dataProvider}/>} />
                 <Route path="/admin/*" element={<StoreAdmin dataProvider={dataProvider} />} />
                 <Route path="/vendor/*" element={<VendorAdmin dataProvider={dataProvider} />} />
+                <Route path="/*" element={<StoreFront dataProvider={dataProvider}/>} />
             </Routes>
         </BrowserRouter>
 );
