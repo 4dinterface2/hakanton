@@ -16,7 +16,7 @@ export default function StoreAdmin ({dataProvider}) {
     return <NavigationScroll>
         <Admin basename="/admin" dataProvider={dataProvider} dashboard={Dashboard} theme={theme(customization)} disableTelemetry>
             <CssBaseline/>
-            <Resource name="events" list={EventsList} edit={EventEdit} create={EventCreate}/>
+            <Resource name="events" list={EventsList} edit={EventEdit} create={EventCreate} />
             <Resource name="orders" list={OrdersList}/>
             <Resource name="customers" list={CustomersList}/>
         </Admin>

@@ -10,7 +10,7 @@ import {
     ReferenceArrayField
 } from 'react-admin';
 
-export function Editor(){
+export default function Editor(){
     return (<>
         <TabbedForm>
             <FormTab
@@ -38,9 +38,18 @@ export function Editor(){
             </FormTab>
 
             <FormTab
+                label="ресурсы"
+                sx={{ maxWidth: '40em' }}>
+                <h1> ресурсы </h1>
+                <h1> - нозвание </h1>
+                <h1> - дата бронирования </h1>
+                <h1> - цена</h1>
+            </FormTab>
+
+            <FormTab
                 label="Цена"
                 sx={{ maxWidth: '40em' }}>
-                <TextInput  label="Цена за обучение" source="name" />
+                <TextInput  label="Цена за обучение" source="price" />
                 <h1> ИТОГОВАЯ СТОИМОСТЬ: </h1>
             </FormTab>
         </TabbedForm>

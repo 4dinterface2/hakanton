@@ -3,6 +3,7 @@ import * as React from "react";
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import StoreAdmin from './admin';
+import VendorAdmin from './vendor';
 
 //import { ReactQueryDevtools } from 'react-query/devtools'
 //import jsonServerProvider from 'ra-data-json-server';
@@ -32,8 +33,9 @@ const dataProvider = fakeDataProvider({
         {id:1, customerId:1,  eventId:0, price: 100, options: [], date: '', customers: [
            1
         ] },
-    ]
-
+    ],
+    rooms: [],
+    options: []
 })
 
 
@@ -48,6 +50,7 @@ const App = () => (
             <Routes>
                 <Route path="/store" element={<StoreFront dataProvider={dataProvider}/>} />
                 <Route path="/admin/*" element={<StoreAdmin dataProvider={dataProvider} />} />
+                <Route path="/vendor/*" element={<VendorAdmin dataProvider={dataProvider} />} />
             </Routes>
         </BrowserRouter>
 );

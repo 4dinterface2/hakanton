@@ -27,8 +27,7 @@ export const EventsList = () => (
             <Datagrid rowClick="edit">
                 <TextField source="id" />
                 <ReferenceField source="userId" reference="users" />
-                <TextField source="title" />
-                <TextField source="body" />
+                <TextField source="price" />
                 <EditButton />
             </Datagrid>
         </List>
