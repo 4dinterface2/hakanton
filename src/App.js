@@ -14,6 +14,7 @@ import StoreAdmin from './admin';
 // const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 import fakeDataProvider from 'ra-data-fakerest';
 import theme from './theme'
+import StoreFront from "./adminStorage";
 
 const dataProvider = fakeDataProvider({
     orders:[
@@ -37,14 +38,15 @@ const dataProvider = fakeDataProvider({
 
 
 
-const StoreFront = ()=>{
-    return <div> hello world </div>
- }
+
+
+
+
 
 const App = () => (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<StoreFront />} />
+                <Route path="/store" element={<StoreFront dataProvider={dataProvider}/>} />
                 <Route path="/admin/*" element={<StoreAdmin dataProvider={dataProvider} />} />
             </Routes>
         </BrowserRouter>
