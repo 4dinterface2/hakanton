@@ -46,13 +46,16 @@ const dataProvider = fakeDataProvider({
     rooms: [],
     options: [],
     storeEvents: [
-        {id:0, eventId:0, eventName:'Psychotherapy', eventOrganizer:'Veronika Stepanova', date:'',description:'', 
+        {id:0, eventId:0, eventName:'Psychotherapy', cost:'100$', eventOrganizer:'Veronika Stepanova', date:'13 august',description:'', 
         img:[]},
-        {id:1, eventId:1, eventName:'Dance', eventOrganizer:'Natasha', date:'', img: 'https://static.wikia.nocookie.net/warriors-cats/images/a/a6/%D0%9A%D0%BE%D1%82%D1%8F%D1%82%D0%B0.jpg'},
-        {id:2, eventId:2, eventName:'Dance', eventOrganizer:'Natasha', date:'', img:'https://cdnn1.img.sputnik-abkhazia.info/img/102889/91/1028899171_539:-1:1085:600_1920x0_80_0_0_56c57340b5e188285b5fa47607c4eda3.jpg'},
-        {id:3, eventId:3, eventName:'Dance', eventOrganizer:'Natasha', date:'', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bonsai_kitten.jpg/274px-Bonsai_kitten.jpg'},
-        {id:4, eventId:4, eventName:'Dance', eventOrganizer:'Natasha', date:'', img:[]},
-        {id:5, eventId:5, eventName:'Dance', eventOrganizer:'Natasha', date:'', img:[]}
+        {id:1, eventId:1, eventName:'Dance', cost:'300$', eventOrganizer:'Natasha', date:'11 november', img: 'https://static.wikia.nocookie.net/warriors-cats/images/a/a6/%D0%9A%D0%BE%D1%82%D1%8F%D1%82%D0%B0.jpg'},
+        {id:2, eventId:2, eventName:'Dance', cost:'400$', eventOrganizer:'Natasha', date:'5 october', img:'https://cdnn1.img.sputnik-abkhazia.info/img/102889/91/1028899171_539:-1:1085:600_1920x0_80_0_0_56c57340b5e188285b5fa47607c4eda3.jpg'},
+        {id:3, eventId:3, eventName:'Dance', cost:'1000$', eventOrganizer:'Natasha', date:'25 june', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bonsai_kitten.jpg/274px-Bonsai_kitten.jpg'},
+        {id:4, eventId:4, eventName:'Dance', cost:'200$', eventOrganizer:'Natasha', date:'31 jule', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bonsai_kitten.jpg/274px-Bonsai_kitten.jpg'},
+        {id:5, eventId:5, eventName:'Dance', cost:'150$', eventOrganizer:'Natasha', date:'1 may', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bonsai_kitten.jpg/274px-Bonsai_kitten.jpg'},
+        {id:6, eventId:6, eventName:'Dance', cost:'100$', eventOrganizer:'Natasha', date:'5 march', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bonsai_kitten.jpg/274px-Bonsai_kitten.jpg'},
+        {id:7, eventId:7, eventName:'Dance', cost:'100$',  eventOrganizer:'Natasha', date:'15 october', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bonsai_kitten.jpg/274px-Bonsai_kitten.jpg'},
+        {id:8, eventId:8, eventName:'Dance', cost:'100$', eventOrganizer:'Natasha', date:'9 june', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bonsai_kitten.jpg/274px-Bonsai_kitten.jpg'}
     ]
 })
 
