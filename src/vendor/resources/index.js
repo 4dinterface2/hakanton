@@ -10,13 +10,14 @@ const postFilters = [
     <ReferenceInput source="userId" label="User" reference="users" />,
 ];
 
-export default function RoomsList () {
+
+export default function ResurceList () {
     return <MainCard>
-        <List filters={postFilters}>
+        <List filters={postFilters} >
             <Datagrid rowClick="edit">
                 <TextField source="id" />
-                <TextField source="title" title='тип номера' />
-                <TextField source="title" title='вместимость' />
+                <TextField source="title" title='ресурс' />
+                <TextField source="description" title='описаниеx' />
                 <TextField source="title" title='количество номеров' />
                 <EditButton />
             </Datagrid>

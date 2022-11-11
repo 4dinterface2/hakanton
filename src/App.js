@@ -78,17 +78,9 @@ const dataProvider = fakeDataProvider({
     ]
 })
 
-
-
-
-
-
-
-
 const App = () => (
         <BrowserRouter>
             <Routes>
-
                 <Route path="/admin/*" element={<StoreAdmin dataProvider={dataProvider} />} />
                 <Route path="/vendor/*" element={<VendorAdmin dataProvider={dataProvider} />} />
                 <Route path="/superadmin/*" element={<SuperAdmin dataProvider={dataProvider} />} />
