@@ -15,7 +15,8 @@ import Landing from './landing';
 //import UserIcon from '@mui/icons-material/Group';
 
 // const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
-import fakeDataProvider from 'ra-data-fakerest';
+// import fakeDataProvider from 'ra-data-fakerest';
+import fakeDataProvider from 'ra-data-local-storage';
 import theme from './theme'
 import StoreFront from "./adminStorage";
 
@@ -28,14 +29,17 @@ import StoreFront from "./adminStorage";
 import SuperAdmin from "./adminStorage";
 
 const dataProvider = fakeDataProvider({
+
     orders:[
         {id:0, customerId:0,  eventId:0, price: 150, options: [], date: '' },
         {id:1, customerId:1,  eventId:0, price: 100, options: [], date: '' },
     ],
+
     customers:[
         {id:0, },
         {id:1, },
     ],
+
     events:[
         {id:0, customerId:0,  eventId:0, price: 150, options: [], date: '', customers: [
            0
@@ -44,8 +48,22 @@ const dataProvider = fakeDataProvider({
            1
         ] },
     ],
-    rooms: [],
-    options: [],
+
+    resources: [
+        {id:1, name:'meet room', price: 200},
+        {id:2, name:'pixas', price: 300}
+    ],
+
+    hotels: [
+        {id:1, name:'rixas'},
+        {id:2, name:'pixas'}
+    ],
+
+    rooms: [
+        {id:1, name:'rixas'},
+        {id:2, name:'pixas'}
+    ],
+
     storeEvents: [
         {id:0, eventId:0, eventName:'Psychotherapy', cost:'100$', eventOrganizer:'Veronika Stepanova', date:'13 august',description:'', 
         img:[]},

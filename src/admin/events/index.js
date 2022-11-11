@@ -3,12 +3,15 @@ import {
     List, Datagrid, TextField, ReferenceField, EditButton, TextInput, ReferenceInput,
     SimpleForm,
     Edit,
+    DateField,
     Create,
     useRecordContext,
     TabbedForm,
     FormTab,
     ReferenceArrayField
 } from 'react-admin';
+
+
 
 import Editor from './editor';
 
@@ -28,13 +31,11 @@ export const EventsList = () => (
                 <TextField source="id" />
                 <ReferenceField source="userId" reference="users" />
                 <TextField source="price" />
+                <DateField source="startDate" />
+                <DateField source="endDate" />
                 <EditButton />
             </Datagrid>
-        </List>
-        );
-
-
-
+        </List>);
 
 export const EventEdit = () => (
         <Edit title={<PostTitle />}>

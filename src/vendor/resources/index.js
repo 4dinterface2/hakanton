@@ -3,12 +3,12 @@ import {
     List, Datagrid, TextField, ReferenceField, EditButton, TextInput, ReferenceInput,
 } from 'react-admin';
 
-import MainCard from '../ui-component/cards/MainCard';
+import MainCard from '../../ui-component/cards/MainCard';
 
 const postFilters = [
     <TextInput source="q" label="Search" alwaysOn />,
     <ReferenceInput source="userId" label="User" reference="users" />,
-    ];
+];
 
 export default function RoomsList () {
     return <MainCard>
