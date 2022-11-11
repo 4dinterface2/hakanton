@@ -4,6 +4,7 @@ import * as React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import StoreAdmin from './admin';
 import VendorAdmin from './vendor';
+import Landing from './landing';
 
 
 //import { ReactQueryDevtools } from 'react-query/devtools'
@@ -74,6 +75,7 @@ const App = () => (
                 <Route path="/vendor/*" element={<VendorAdmin dataProvider={dataProvider} />} />
                 <Route path="/superadmin/*" element={<SuperAdmin dataProvider={dataProvider} />} />
                 <Route path="/*" element={<StoreFront dataProvider={dataProvider}/>} />
+                <Route path="/:id" element={<Landing dataProvider={dataProvider}/>} />
             </Routes>
         </BrowserRouter>
 );

@@ -44,4 +44,9 @@
     font-weight: 30%;
     padding: 10px 0px 0px 0px;
     color:darkgrey;
+    display: flex;
+}
+
+.cost {
+    text-align: right;
 }
