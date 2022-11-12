@@ -48,3 +48,14 @@
 .cost {
     text-align: right;
 }
+
+.name {
+    font-size: 14px;
+    
+    color:#4c4852; 
+    font-family: Proxima Nova Cn, Helvetica Neue, Helvetica, sans-serif;
+    text-decoration:underline;
+    padding:5px;
+    white-space: normal;
+    width: 200px;
+}

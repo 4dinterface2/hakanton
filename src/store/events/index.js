@@ -129,7 +129,7 @@ export const EventsListGridTest = () => {
 
 
 
-export const EventsList = () => (
+export  const EventsList = () => (
     <List>
         <EventsListGridTest />
 
