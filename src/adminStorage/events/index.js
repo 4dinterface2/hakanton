@@ -70,7 +70,7 @@ export const EventsListGrid = () => {
 
 export const EventsListGridTest = () => {
     const clickHendler = React.useCallback((id) => { 
-        navigate("/storeEvents" + 1) }, [])
+        navigate("/" + id) }, [])
     const navigate = useNavigate();
     const { data, isLoading } = useListContext();
     if (isLoading) return null;

@@ -10,7 +10,8 @@ import Header from './speaker/header'
 import s from './index.module.css'
 // import BigHeader from './speaker/bigheafer';
 import MyLayout from './layout';
-import Format from './speaker/Format';
+import Format from './speaker/format';
+import BigHeader from './speaker/bigheafer';
 
 const Speakers = () => {
     return (
@@ -30,7 +31,7 @@ const Speakers = () => {
 const Description = () => {
     return (
         <div class={s.format}>
-            <Format />
+            <Format/>
         </div>
     )
 }
@@ -42,11 +43,12 @@ const DataRender = () => {
     return (
         <div >
             <div class={s.bigHeader}>
-                
+                <BigHeader/>
             </div>
             <div class={s.main}>
                 
-              hello world
+             <Speakers/>
+             <Description/>
 
             </div>
             

@@ -84,7 +84,7 @@ const App = () => (
                 <Route path="/admin/*" element={<StoreAdmin dataProvider={dataProvider} />} />
                 <Route path="/vendor/*" element={<VendorAdmin dataProvider={dataProvider} />} />
                 <Route path="/superadmin/*" element={<SuperAdmin dataProvider={dataProvider} />} />
-                {/* <Route path="/*" element={<StoreFront dataProvider={dataProvider}/>} /> */}
+                <Route path="/*" element={<StoreFront dataProvider={dataProvider}/>} /> 
                 <Route path="/event/:id" element={<Landing dataProvider={dataProvider}/>} />
             </Routes>
         </BrowserRouter>
