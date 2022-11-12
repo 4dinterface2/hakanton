@@ -8,17 +8,17 @@ import { useParams, Route } from 'react-router-dom';
 import SpeacerCard from './speacerCard';
 import Header from './speaker/header'
 import s from './index.module.css'
-// import BigHeader from './speaker/bigheafer';
-import MyLayout from './layout';
-import Format from './speaker/format';
 import BigHeader from './speaker/bigheafer';
+import MyLayout from './layout';
+import DDescription from './description';
+import RoomGallery from './hotel';
 
 const Speakers = () => {
     return (
         <div >
             <Header />
 
-            <div class={s.cards}>
+            <div className={s.cards}>
                 <SpeacerCard />
                 <SpeacerCard />
                 <SpeacerCard />
@@ -28,28 +28,31 @@ const Speakers = () => {
     )
 }
 
-const Description = () => {
+const Description = ({data}) => {
     return (
         <div class={s.format}>
-            <Format/>
+            <DDescription data={data}/>
         </div>
     )
 }
 
 const DataRender = () => {
+    console.log('DATA RENDER!!!');
     let { id } = useParams();
-    const { data, isLoading } = useGetOne('storeEvents', { id })
+    const { data, isLoading } = useGetOne('events', { id })
     if (isLoading) return null;
     return (
         <div >
             <div class={s.bigHeader}>
-                <BigHeader/>
+                <BigHeader data={data}/>
             </div>
             <div class={s.main}>
-                
-             <Speakers/>
-             <Description/>
-
+                <div style={{height:'50px'}}/>
+                <Speakers/>
+                <div style={{height:'50px'}}/>
+                <Description data={data}/>
+                <div style={{height:'50px'}}/>
+                <RoomGallery/>
             </div>
             
         </div>
@@ -64,15 +67,16 @@ export default function Landing({ dataProvider }) {
 
     return <NavigationScroll>
 
-        <Admin basename="/" dataProvider={dataProvider} dashboard={DataRender}
-            theme={theme(customization)} disableTelemetry layout={MyLayout}>
+        <Admin
+            basename="/"
+            dataProvider={dataProvider}
+            dashboard={DataRender}
+            theme={theme(customization)}
+            disableTelemetry layout={MyLayout}>
+
             <Resource name="stt" />
-
             <CssBaseline />
-
             <Route path="/event/:id" element={<DataRender />} />
-
-
 
         </Admin>
     </NavigationScroll>

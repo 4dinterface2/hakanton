@@ -65,8 +65,6 @@ export const RoomCreate = props => (
         </Create>
         );
 
-
-
 export function RoomsList () {
     return<MainCard>
         <List filters={postFilters}>

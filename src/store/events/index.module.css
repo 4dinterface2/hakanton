@@ -2,33 +2,31 @@
     position: relative;
     display: inline-block;
     padding: 10px;
-    
-    
+
+
 }
 
 .imgblock img {
-    
-    object-fit: cover;    
+
+    object-fit: cover;
 }
 .text {
-    
     background: #222;
-    color: #fff;    
+    color: #fff;
     border-radius: 5px;
     position: absolute;
-    left:0px;    
-    bottom:0px;    
+    left:0px;
+    bottom:0px;
     width:100%;
-    margin:0px;    
-    font-size: 18px;        
+    margin:0px;
+    font-size: 18px;
     opacity:0.8;
     padding:10px;
-    
 }
 
 .main {
     position: relative;
-    
+
 }
 
 .cardmedia {

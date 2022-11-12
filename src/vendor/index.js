@@ -3,7 +3,7 @@ import theme from '../theme'
 import { Admin, Resource, ListGuesser, EditGuesser } from 'react-admin';
 import { CssBaseline, StyledEngineProvider } from '@mui/material';
 import {RoomsList, RoomCreate, RoomEdit } from './rooms';
-import Resources from './resources';
+import {ResurceList, ResourceCreate, ResourseEdit} from './resources';
 
 import NavigationScroll from '../layout/navigationScroll';
 // import Dashboard from './dashboard';
@@ -20,7 +20,7 @@ export default function StoreAdmin ({dataProvider}) {
     return <NavigationScroll>
         <Admin basename="/vendor" dataProvider={dataProvider}  disableTelemetry>
             <Resource label= 'комнатный фонд' name="rooms" list={RoomsList} create={RoomCreate} edit={RoomEdit} />
-            <Resource label= 'ресурсы' name="resources" list={Resources} />
+            <Resource label= 'ресурсы' name="resources" list={ResurceList} create={ResourceCreate} edit={ResourseEdit} />
             <CssBaseline/>
         </Admin>
     </NavigationScroll>

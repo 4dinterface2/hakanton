@@ -49,9 +49,7 @@ const MyLayout = ({
     return (
         <Root>
             <AppFrame>
-                <AppBar title={title} open={open} />
-                <ContentWithSidebar>
-                    
+                <ContentWithSidebar> 
                     <Content>
                         {children}
                     </Content>
@@ -71,3 +69,5 @@ MyLayout.propTypes = {
 };
 
 export default MyLayout;
+
+///  <AppBar title={title} open={open} />
