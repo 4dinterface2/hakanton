@@ -18,4 +18,3 @@ export const EventCreate = props => (
         </Create>
         );
 
-/*

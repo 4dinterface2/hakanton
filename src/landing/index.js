@@ -3,7 +3,7 @@ import theme from '../theme'
 import { CssBaseline, StyledEngineProvider } from '@mui/material';
 import NavigationScroll from '../layout/navigationScroll';
 import customizationReducer from "./reducer";
-import { Admin, CustomRoutes, Resource, useGetOne, defaultTheme } from 'react-admin';
+import { Admin, CustomRoutes, Resource, useGetOne, defaultTheme, RecordContextProvider } from 'react-admin';
 import { useParams, Route } from 'react-router-dom';
 import SpeacerCard from './speacerCard';
 import Header from './speaker/header'
@@ -42,6 +42,7 @@ const DataRender = () => {
     const { data, isLoading } = useGetOne('events', { id })
     if (isLoading) return null;
     return (
+        <RecordContextProvider  value={data}>
         <div >
             <div class={s.bigHeader}>
                 <BigHeader data={data}/>
@@ -50,12 +51,13 @@ const DataRender = () => {
                 <div style={{height:'50px'}}/>
                 <Speakers/>
                 <div style={{height:'50px'}}/>
-                <Description data={data}/>
+                <Description data={data} />
                 <div style={{height:'50px'}}/>
                 <RoomGallery/>
             </div>
             
         </div>
+        </RecordContextProvider>
     )
 }
 
